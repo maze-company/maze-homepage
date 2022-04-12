@@ -1,0 +1,13 @@
+---
+type Props = {
+  imgSrc: string
+  text: string
+}
+
+const { imgSrc, text } = Astro.props as Props
+---
+
+<div class="w-80 flex flex-col justify-center mx-4 md:mx-16 my-20">
+  <img class="h-48 mb-4 md:mb-8" src={imgSrc} />
+  <p>{text}</p>
+</div>

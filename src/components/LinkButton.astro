@@ -1,0 +1,27 @@
+---
+type Props = {
+  className?: string
+  which?: "default" | "primary" | "secondary"
+  to?: string
+}
+
+const { className = "", which = "default", to } = Astro.props as Props
+
+const primaryBgColor =
+  "bg-gradient-to-r from-primary to-primary-dark hover:bg-none hover:bg-primary"
+const secondaryBgColor =
+  "bg-gradient-to-r from-secondary-light to-secondary hover:bg-none hover:bg-secondary-light"
+const bgColor =
+  which === "primary"
+    ? primaryBgColor
+    : which === "secondary"
+    ? secondaryBgColor
+    : "hover:bg-[#fff2]"
+---
+
+<a
+  href={to}
+  class={`inline-block font-bold text-sm md:text-base text-center text-white rounded-lg px-4 py-3 md:px-6 ${bgColor} ${className}`}
+>
+  <slot></slot>
+</a>
