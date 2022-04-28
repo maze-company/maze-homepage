@@ -1,11 +1,5 @@
 ---
 import AboutCard from "./AboutCard.astro"
-import PNGLogoHanamsi from "../assets/logo-hanamsi.png"
-import PNGLogoHuic from "../assets/logo-huic.png"
-import PNGLogoOnpower from "../assets/logo-onpower.png"
-import PNGLogoKfme from "../assets/logo-kfme.png"
-import PNGLogoNationalCafe from "../assets/logo-national-cafe.png"
-import SVGLogoKlaypay from "../assets/logo-klaypay.svg"
 import SVGUndrawCityGirl from "../assets/undraw_city_girl_ccpd.svg"
 import SVGUndrawCodeTyping from "../assets/undraw_code_typing_re_p8b9.svg"
 import SVGUndrawSharedGoals from "../assets/undraw_shared_goals_re_jvqd.svg"
@@ -29,43 +23,20 @@ const aboutList = [
     text: "경기도 하남시, 전국소기업소상공인연합회 하남시지부, 그리고 하남시민과 함께 합니다.",
   },
 ]
-
-const partnerList = [
-  { src: PNGLogoHanamsi, alt: "하남시 logo" },
-  { src: PNGLogoHuic, alt: "하남도시공사 logo" },
-  { src: SVGLogoKlaypay, alt: "클레이페이 logo" },
-  { src: PNGLogoOnpower, alt: "온파워 네트웍스 logo" },
-  { src: PNGLogoKfme, alt: "소상공인연합회 logo" },
-  { src: PNGLogoNationalCafe, alt: "전국카페사장연합회 logo" },
-]
 ---
 
-<section id="about">
-  <div class="max-w-screen-lg mx-auto px-8 py-32">
-    <header class="mb-16">
-      <h2
-        class="bg-clip-text bg-gradient-to-r from-primary to-secondary text-transparent text-xl md:text-2xl font-bold text-center"
-      >
-        미로(MAZE)같이 복잡하게 꼬인 우리네 문제들을 <br class="hidden sm:block"
-        />하나둘씩 풀어나갑니다.
-      </h2>
-    </header>
-    <div class="flex flex-wrap text-white text-center justify-center">
-      {aboutList.map(({ imgSrc, text }) => (
-        <AboutCard imgSrc={imgSrc} text={text} />
-      ))}
-    </div>
+<section id="about" class="max-w-screen-lg mx-auto px-8 py-32">
+  <header class="mb-16">
+    <h2
+      class="bg-clip-text bg-gradient-to-r from-primary to-secondary text-transparent text-xl md:text-2xl font-bold text-center"
+    >
+      미로(MAZE)같이 복잡하게 꼬인 우리네 문제들을 <br class="hidden sm:block"
+      />하나둘씩 풀어나갑니다.
+    </h2>
+  </header>
+  <div class="flex flex-wrap text-white text-center justify-center">
+    {aboutList.map(({ imgSrc, text }) => (
+      <AboutCard imgSrc={imgSrc} text={text} />
+    ))}
   </div>
-  <section class="bg-white px-4 py-32">
-    <div class="max-w-screen-lg mx-auto">
-      <header class="flex items-end justify-center mb-8">
-        <h2 class="text-2xl md:text-3xl font-bold">함께 하는 분들</h2>
-      </header>
-      <div class="flex flex-wrap justify-center">
-        {partnerList.map(({ src, alt }) => (
-          <img class="h-16 mx-8 my-4 md:my-8" src={src} alt={alt} />
-        ))}
-      </div>
-    </div>
-  </section>
 </section>

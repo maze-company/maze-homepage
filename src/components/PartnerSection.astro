@@ -1,0 +1,30 @@
+---
+import PNGLogoHanamsi from "../assets/logo-hanamsi.png"
+import PNGLogoHuic from "../assets/logo-huic.png"
+import PNGLogoOnpower from "../assets/logo-onpower.png"
+import PNGLogoKfme from "../assets/logo-kfme.png"
+import PNGLogoNationalCafe from "../assets/logo-national-cafe.png"
+import SVGLogoKlaypay from "../assets/logo-klaypay.svg"
+
+const partnerList = [
+  { src: PNGLogoHanamsi, alt: "하남시 logo" },
+  { src: PNGLogoHuic, alt: "하남도시공사 logo" },
+  { src: SVGLogoKlaypay, alt: "클레이페이 logo" },
+  { src: PNGLogoOnpower, alt: "온파워 네트웍스 logo" },
+  { src: PNGLogoKfme, alt: "소상공인연합회 logo" },
+  { src: PNGLogoNationalCafe, alt: "전국카페사장연합회 logo" },
+]
+---
+
+<section class="bg-white px-4 py-32">
+  <div class="max-w-screen-lg mx-auto">
+    <header class="flex items-end justify-center mb-8">
+      <h2 class="text-2xl md:text-3xl font-bold">함께 하는 분들</h2>
+    </header>
+    <div class="flex flex-wrap justify-center">
+      {partnerList.map(({ src, alt }) => (
+        <img class="h-16 mx-8 my-4 md:my-8" src={src} alt={alt} />
+      ))}
+    </div>
+  </div>
+</section>
