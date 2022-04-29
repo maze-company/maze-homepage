@@ -1,6 +1,6 @@
 ---
-import PNGLogoWhite from "../assets/logo-white.png"
-import PNGIconWhite from "../assets/icon-white.png"
+import PNGLogo from "../assets/logo.png"
+import PNGIcon from "../assets/icon.png"
 
 const navItems = [
   { label: "소개", to: "#about" },
@@ -11,21 +11,13 @@ const navItems = [
 ]
 ---
 
-<nav class="bg-background fixed w-full top-0 pt-4 pb-6 px-4">
+<nav class="bg-white fixed w-full top-0 pt-4 pb-6 px-4">
   <div class="max-w-screen-xl mx-auto flex items-end">
     <a href="#">
-      <img
-        class="hidden md:inline h-12 pr-4"
-        src={PNGLogoWhite}
-        alt="MAZE logo white"
-      />
-      <img
-        class="md:hidden h-8 inline pr-4"
-        src={PNGIconWhite}
-        alt="MAZE icon white"
-      />
+      <img class="hidden md:inline h-12 pr-4" src={PNGLogo} alt="MAZE logo" />
+      <img class="md:hidden h-8 inline pr-4" src={PNGIcon} alt="MAZE icon" />
     </a>
-    <ul class="flex font-bold text-white items-end">
+    <ul class="flex font-bold items-end">
       {navItems.map(({ label, to }) => (
         <li>
           <a class="text-sm sm:text-base mx-2 sm:px-4 sm:py-2" href={to}>
