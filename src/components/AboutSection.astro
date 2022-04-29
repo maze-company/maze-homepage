@@ -1,9 +1,10 @@
 ---
 import AboutCard from "./AboutCard.astro"
-import SVGUndrawCityGirl from "../assets/undraw_city_girl_ccpd.svg"
+import SVGUndrawLightbulbMoment from "../assets/undraw_lightbulb_moment_re_ulyo.svg"
 import SVGUndrawCodeTyping from "../assets/undraw_code_typing_re_p8b9.svg"
 import SVGUndrawSharedGoals from "../assets/undraw_shared_goals_re_jvqd.svg"
 import SVGUndrawSolutionMindset from "../assets/undraw_solution_mindset_-34-bi.svg"
+import SVGUndrawAnalyze from "../assets/undraw_analyze_re_9kco.svg"
 
 const aboutList = [
   {
@@ -19,19 +20,26 @@ const aboutList = [
     text: "게임이론의 관점으로 복잡한 미로(MAZE)같은 현실의 문제를 풀어내는 a-MAZE-ing한 솔루션을 제공합니다.",
   },
   {
-    imgSrc: SVGUndrawCityGirl,
-    text: "경기도 하남시, 전국소기업소상공인연합회 하남시지부, 그리고 하남시민과 함께 합니다.",
+    imgSrc: SVGUndrawAnalyze,
+    text: "네트워크 과학에 기반해 현재의 비효율적 카페 시장 구조를 hub-and-spoke로 전환하는 패러다임 시프트를 제시합니다.",
   },
 ]
 ---
 
-<section id="about" class="max-w-screen-lg mx-auto px-8 py-32">
+<section id="about" class="max-w-screen-lg mx-auto px-8 py-48">
   <header class="mb-16">
+    <div class="flex justify-center mx-4">
+      <img class="h-72 sm:h-80 md:h-96 mb-12" src={SVGUndrawLightbulbMoment} />
+    </div>
     <h2
-      class="bg-clip-text bg-gradient-to-r from-primary to-secondary text-transparent text-xl md:text-2xl font-bold text-center"
+      class="bg-clip-text bg-gradient-to-r from-primary to-secondary text-transparent font-bold text-center"
     >
-      미로(MAZE)같이 복잡하게 꼬인 우리네 문제들을 <br class="hidden sm:block"
-      />하나둘씩 풀어나갑니다.
+      <span class="block text-lg sm:text-xl md:text-2xl mb-4">
+        미로(MAZE)같이 꼬인 우리네 문제들,
+      </span>
+      <span class="block text-2xl sm:text-3xl md:text-4xl"
+        >메이즈가 하나둘씩 풀어나갑니다.
+      </span>
     </h2>
   </header>
   <div class="flex flex-wrap text-center justify-center">
