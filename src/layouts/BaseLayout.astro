@@ -1,6 +1,8 @@
 ---
 import Navbar from "../components/Navbar.astro"
 import Footer from "../components/Footer.astro"
+
+const { route = "/" } = Astro.props as { route?: "/" | "/about" | "/project" }
 ---
 
 <html lang="en" class="scroll-smooth">
@@ -16,7 +18,7 @@ import Footer from "../components/Footer.astro"
     />
   </head>
   <body class="w-full min-h-screen flex flex-col">
-    <Navbar />
+    <Navbar active={route} />
     <main class="flex-grow">
       <slot></slot>
     </main>
