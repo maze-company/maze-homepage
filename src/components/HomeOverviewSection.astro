@@ -1,5 +1,4 @@
 ---
-import AboutCard from "./AboutCard.astro"
 import SVGUndrawLightbulbMoment from "../assets/undraw_lightbulb_moment_re_ulyo.svg"
 import SVGUndrawCodeTyping from "../assets/undraw_code_typing_re_p8b9.svg"
 import SVGUndrawSharedGoals from "../assets/undraw_shared_goals_re_jvqd.svg"
@@ -44,7 +43,10 @@ const aboutList = [
   </header>
   <div class="flex flex-wrap text-center justify-center">
     {aboutList.map(({ imgSrc, text }) => (
-      <AboutCard imgSrc={imgSrc} text={text} />
+      <div class="w-80 flex flex-col justify-center mx-4 md:mx-16 my-20">
+        <img class="h-48 mb-4 md:mb-8" src={imgSrc} />
+        <p>{text}</p>
+      </div>
     ))}
   </div>
 </section>
