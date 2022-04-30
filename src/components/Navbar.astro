@@ -2,19 +2,31 @@
 import PNGLogo from "../assets/logo.png"
 import PNGIcon from "../assets/icon.png"
 
-const navItems = []
+const navItems = [
+  {
+    label: "메이즈",
+    to: "/about",
+  },
+  {
+    label: "프로젝트",
+    to: "/project",
+  },
+]
 ---
 
 <nav class="bg-white fixed w-full top-0 pt-4 pb-6 px-4">
   <div class="max-w-screen-xl mx-auto flex items-end">
-    <a href="#">
+    <a href="/">
       <img class="hidden md:inline h-12 pr-4" src={PNGLogo} alt="MAZE logo" />
       <img class="md:hidden h-8 inline pr-4" src={PNGIcon} alt="MAZE icon" />
     </a>
     <ul class="flex font-bold items-end">
       {navItems.map(({ label, to }) => (
         <li>
-          <a class="text-sm sm:text-base mx-2 sm:px-4 sm:py-2" href={to}>
+          <a
+            class="text-sm md:text-base hover:text-primary-dark mx-2 md:px-4 md:py-2"
+            href={to}
+          >
             {label}
           </a>
         </li>
