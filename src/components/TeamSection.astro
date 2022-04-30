@@ -1,6 +1,5 @@
 ---
 import MemberCard from "./MemberCard.astro"
-import SVGUndrawFemaleAvatar from "../assets/undraw_female_avatar_w3jk.svg"
 import SVGUndrawMaleAvatar from "../assets/undraw_male_avatar_323b.svg"
 
 const memberList = [
@@ -31,54 +30,14 @@ const memberList = [
     },
   },
 ]
-
-const advisorList = [
-  {
-    imgSrc: SVGUndrawMaleAvatar,
-    imgAlt: "profile pic",
-    member: {
-      name: "박대형",
-      title: "기술, R&D 자문",
-      items: [
-        "한국과학기술원 (KAIST) 전산학과 조교수",
-        "Massachusetts Institute of Technology 연구원",
-        "Georgia Institute of Technology 박사",
-      ],
-    },
-  },
-  {
-    imgSrc: SVGUndrawMaleAvatar,
-    imgAlt: "profile pic",
-    member: {
-      name: "김창균",
-      title: "법률 자문",
-      items: ["건설공제조합 전담변호사", "서울대학교 학사"],
-    },
-  },
-  {
-    imgSrc: SVGUndrawFemaleAvatar,
-    imgAlt: "profile pic",
-    member: {
-      name: "김지우",
-      title: "지적재산권 자문",
-      items: ["다선 특허법률사무소 대표변리사", "서울대학교 학사"],
-    },
-  },
-]
 ---
 
-<section id="team" class="bg-background text-white px-4 py-32">
-  <header class="flex items-end justify-center mb-4">
-    <h2 class="text-2xl md:text-3xl font-bold">창업멤버</h2>
+<section id="team" class="bg-background text-white px-4 py-48">
+  <header class="mb-8 text-center">
+    <h2 class="text-2xl md:text-3xl font-bold">리더십</h2>
   </header>
-  <div class="flex flex-col sm:flex-row flex-wrap justify-center mb-16">
+  <div class="flex flex-col items-center">
     {memberList.map(({ imgSrc, imgAlt, member }) => (
-      <MemberCard imgSrc={imgSrc} imgAlt={imgAlt} member={member} />
-    ))}
-  </div>
-  <h2 class="text-center text-2xl md:text-3xl font-bold mb-4">자문위원</h2>
-  <div class="flex flex-wrap justify-center">
-    {advisorList.map(({ imgSrc, imgAlt, member }) => (
       <MemberCard imgSrc={imgSrc} imgAlt={imgAlt} member={member} />
     ))}
   </div>
