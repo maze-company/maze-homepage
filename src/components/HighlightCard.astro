@@ -1,0 +1,19 @@
+---
+type Props = {
+  className?: string
+  title: string
+}
+
+const { className = "bg-primary", title } = Astro.props as Props
+---
+
+<div class={`text-left text-white m-4 p-8 min-h-full ${className}`}>
+  <h2
+    class="tracking-wider uppercase text-xl md:text-2xl font-bold mb-4 md:mb-8"
+  >
+    {title}
+  </h2>
+  <p class="md:text-lg">
+    <slot></slot>
+  </p>
+</div>
