@@ -1,6 +1,8 @@
 ---
 import Navbar from "../components/Navbar.astro"
 import Footer from "../components/Footer.astro"
+import PNGLogo from "../assets/logo.png"
+import PNGIcon from "../assets/icon.png"
 
 const { route = "/" } = Astro.props as { route?: "/" | "/about" | "/project" }
 ---
@@ -16,11 +18,13 @@ const { route = "/" } = Astro.props as { route?: "/" | "/about" | "/project" }
       href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preload" as="image" href={PNGLogo} />
+    <link rel="preload" as="image" href={PNGIcon} />
   </head>
   <body class="w-full min-h-screen flex flex-col">
     <Navbar active={route} />
     <main class="flex-grow">
-      <slot></slot>
+      <slot />
     </main>
     <Footer />
   </body>
