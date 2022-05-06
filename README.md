@@ -45,10 +45,11 @@ npm run dev
 | `npm run dev`     | `localhost:3000`에서 개발 서버(dev server)를 실행합니다 |
 | `npm run build`   | `/dist/`에 production 사이트를 생성합니다               |
 | `npm run preview` | production 사이트를 로컬 환경에서 미리보기 합니다       |
+| `npm run deploy`  | production 사이트를 GitHub Pages에 배포합니다           |
 
 ## Deployment
 
-`npm run build` 명령어를 실행해 `/dist/`에 생성되는 production 사이트는 GitHub Actions를 통해 GitHub Pages에 호스팅하는 방식으로 배포합니다. GitHub Actions에 대해서는 [GitHub Actions 공식 문서 사이트](https://docs.github.com/en/actions)를 참고하세요. GitHub Pages에 대해서는 [GitHub Pages 공식 문서 사이트](https://docs.github.com/en/pages)를 참고하세요.
+`npm run deploy` 명령어를 실행해 production 사이트를 GitHub Pages에 호스팅하는 방식으로 배포합니다. GitHub Pages에 대해서는 [GitHub Pages 공식 문서 사이트](https://docs.github.com/en/pages)를 참고하세요.
 
 ## Project Structure
 
