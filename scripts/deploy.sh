@@ -21,9 +21,10 @@ git add -A
 git commit -m 'deploy'
 
 # if you are deploying to https://<USERNAME>.github.io
-git push -f https://github.com/maze-company/maze-company-landing.github.io.git main
+# git push -f https://github.com/maze-company/maze-company-landing.github.io.git main
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
 # git push -f https://github.com/maze-company/maze-homepage.git main:gh-pages
+git push -f https://github.com/maze-company/maze-company-landing.git main:gh-pages
 
 cd -
